@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panchatantra Stories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9ed;
+      color: #263526;
+    }
+
+    header {
+      background: linear-gradient(135deg, #14532d, #16a34a);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .search {
+      display: block;
+      width: 90%;
+      max-width: 500px;
+      margin: 25px auto;
+      padding: 14px;
+      border: 2px solid #bbf7d0;
+      border-radius: 25px;
+      font-size: 16px;
+      outline-color: #16a34a;
+    }
+
+    .stories {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px #00000012;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #dcfce7;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content h2 {
+      color: #166534;
+      margin-bottom: 12px;
+    }
+
+    .content p {
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .moral {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #166534;
+    }
+
+    .read-btn {
+      background: #15803d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .read-btn:hover {
+      background: #14532d;
+    }
+
+    footer {
+      text-align: center;
+      background: #14532d;
+      color: white;
+      padding: 22px;
+      margin-top: 25px;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 20px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>📚 పంచతంత్ర కథలు</h1>
+    <p>తెలివి, స్నేహం, నీతి నేర్పించే అద్భుత కథలు!</p>
+  </header>
+
+  <input
+    class="search"
+    id="search"
+    type="text"
+    placeholder="🔍 కథ పేరు వెతకండి..."
+    oninput="searchStories()"
+  >
+
+  <main class="stories" id="stories">
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600"
+        alt="Lion"
+      >
+      <div class="content">
+        <h2>🦁 సింహం మరియు కుందేలు</h2>
+        <p>
+          ఒక అడవిలో ఒక క్రూరమైన సింహం ఉండేది.
+          ఒక తెలివైన కుందేలు సింహాన్ని బావి దగ్గరకు
+          తీసుకెళ్లి దాని ప్రతిబింబాన్ని చూపించింది.
+          మరో సింహం ఉందని భావించిన సింహం బావిలో
+          దూకింది. కుందేలు అడవి జంతువులను కాపాడింది.
+        </p>
+        <div class="moral">
+          నీతి: బలం కంటే తెలివి గొప్పది.
+        </div>
+        <button class="read-btn" onclick="readStory(this)">
+          🔊 కథ వినండి
+        </button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600"
+        alt="Bird"
+      >
+      <div class="content">
+        <h2>🐦 దాహం వేసిన కాకి</h2>
+        <p>
+          ఒక కాకికి చాలా దాహం వేసింది. దానికి ఒక
+          కుండ కనిపించింది. కుండలో కొద్దిగా నీళ్లు
+          మాత్రమే ఉన్నాయి. కాకి చిన్న రాళ్లను
+          కుండలో వేయడంతో నీళ్లు పైకి వచ్చాయి.
+          కాకి నీళ్లు తాగి దాహం తీర్చుకుంది.
+        </p>
+        <div class="moral">
+          నీతి: ప్రయత్నిస్తే పరిష్కారం దొరుకుతుంది.
+        </div>
+        <button class="read-btn" onclick="readStory(this)">
+          🔊 కథ వినండి
+        </button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=600"
+        alt="Monkey"
+      >
+      <div class="content">
+        <h2>🐒 కోతి మరియు మొసలి</h2>
+        <p>
+          ఒక కోతి చెట్టుపై నివసించేది. దానికి
+          ఒక మొసలితో స్నేహం ఏర్పడింది. మొసలి
+          కోతిని నదిలోకి తీసుకెళ్లినప్పుడు,
+          కోతి తన తెలివితో ప్రమాదం నుంచి
+          తప్పించుకుని చెట్టు మీదకు చేరుకుంది.
+        </p>
+        <div class="moral">
+          నీతి: ఆపదలో తెలివిగా ఆలోచించాలి.
+        </div>
+        <button class="read-btn" onclick="readStory(this)">
+          🔊 కథ వినండి
+        </button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=600"
+        alt="Birds"
+      >
+      <div class="content">
+        <h2>🕊️ పావురాలు మరియు ఎలుక</h2>
+        <p>
+          పావురాల గుంపు ఒక వేటగాడి వలలో
+          చిక్కుకుంది. అవన్నీ కలిసి ఎగిరి
+          తమ స్నేహితుడైన ఎలుక దగ్గరకు వెళ్లాయి.
+          ఎలుక వలను కొరికి పావురాలను
+          విడిపించింది.
+        </p>
+        <div class="moral">
+          నీతి: ఐకమత్యమే మహాబలం.
+        </div>
+        <button class="read-btn" onclick="readStory(this)">
+          🔊 కథ వినండి
+        </button>
+      </div>
+    </article>
+
+  </main>
+
+  <p class="empty" id="empty">
+    కథలు ఏవీ కనిపించలేదు!
+  </p>
+
+  <footer>
+    <p>🌿 Panchatantra Stories | Learn Good Values</p>
+  </footer>
+
+  <script>
+    function searchStories() {
+      const query =
+        document.getElementById("search").value.toLowerCase();
+
+      const cards = document.querySelectorAll(".card");
+      let visible = 0;
+
+      cards.forEach(card => {
+        const match =
+          card.innerText.toLowerCase().includes(query);
+
+        card.style.display = match ? "block" : "none";
+
+        if (match) visible++;
+      });
+
+      document.getElementById("empty").style.display =
+        visible === 0 ? "block" : "none";
+    }
+
+    function readStory(button) {
+      if (!("speechSynthesis" in window)) {
+        alert("మీ browser లో voice feature అందుబాటులో లేదు.");
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+
+      const card = button.closest(".card");
+      const text = card.querySelector(".content").innerText
+        .replace("🔊 కథ వినండి", "");
+
+      const speech = new SpeechSynthesisUtterance(text);
+      speech.lang = "te-IN";
+      speech.rate = 0.85;
+
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>
