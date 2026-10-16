@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenali Ramakrishna Stories</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #fff4d6, #ffe0b2);
+    color: #432818;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #8b0000, #d84315);
+    color: white;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #4e260e;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+.hero {
+    padding: 35px 20px;
+}
+
+.hero img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #d84315;
+    margin: 15px;
+}
+
+.hero h2 {
+    color: #b71c1c;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px auto 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px #0002;
+}
+
+.container h2 {
+    color: #d84315;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #d84315;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    font-size: 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8b0000;
+    transform: scale(1.05);
+}
+
+#moral {
+    display: none;
+    background: #fff3cd;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+footer {
+    background: #4e260e;
+    color: white;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>✨ Tenali Ramakrishna ✨</h1>
+    <p>The Clever Poet of King Krishnadevaraya</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#story">Story</a>
+    <a href="#moral">Moral</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Welcome to the World of Wisdom!</h2>
+    <p>Discover funny stories, clever tricks, and valuable lessons.</p>
+
+    <img
+      src="https://placehold.co/300x300/ffe0b2/8b0000?text=Tenali+Rama"
+      alt="Tenali Ramakrishna illustration">
+
+    <h2>The Clever Tenali Rama</h2>
+</section>
+
+<section class="container" id="story">
+    <h2>📖 Story: Tenali Rama and the Thieves</h2>
+
+    <p>
+        Once upon a time, two thieves planned to steal money
+        from Tenali Ramakrishna's house. Tenali noticed their
+        suspicious activities and decided to teach them a lesson.
+    </p>
+
+    <p>
+        He spoke loudly to his wife, saying, "We should put our
+        valuable jewels and money in a box and throw it into the
+        well for safety."
+    </p>
+
+    <p>
+        The thieves heard this conversation and waited until
+        night. They thought the box in the well contained
+        valuable treasures.
+    </p>
+
+    <p>
+        The thieves spent the entire night drawing water from
+        the well to retrieve the box. Meanwhile, Tenali had
+        cleverly placed the box in a way that made their work
+        difficult.
+    </p>
+
+    <p>
+        By morning, the thieves were exhausted. Tenali came out
+        and thanked them for watering his garden all night!
+        Realizing they had been tricked, the thieves ran away.
+    </p>
+
+    <button onclick="showMoral()">Discover the Moral 💡</button>
+
+    <div id="moral">
+        <strong>Moral of the Story:</strong><br>
+        Intelligence and presence of mind can solve difficult
+        problems. Think wisely before taking action!
+    </div>
+
+    <button onclick="anotherStory()">Read Another Story 📚</button>
+
+    <div id="extra" style="display:none; margin-top:20px;">
+        <h2>👑 Tenali Rama and the Proud Scholar</h2>
+        <p>
+            A proud scholar once claimed that nobody could defeat
+            him in an argument. Tenali Rama calmly asked him to
+            explain a difficult question in simple words.
+        </p>
+        <p>
+            The scholar struggled to explain his ideas clearly.
+            Tenali showed everyone that true knowledge is not
+            about showing off, but about making others understand.
+        </p>
+        <p><strong>Moral:</strong> True wisdom is shown through
+        understanding, not pride.</p>
+    </div>
+</section>
+
+<footer>
+    <p>🌟 Learn Wisdom Through Stories 🌟</p>
+    <p>Created with ❤️ for Tenali Ramakrishna</p>
+</footer>
+
+<script>
+function showMoral() {
+    const moral = document.getElementById("moral");
+
+    if (moral.style.display === "block") {
+        moral.style.display = "none";
+    } else {
+        moral.style.display = "block";
+    }
+}
+
+function anotherStory() {
+    const extra = document.getElementById("extra");
+
+    if (extra.style.display === "block") {
+        extra.style.display = "none";
+    } else {
+        extra.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
